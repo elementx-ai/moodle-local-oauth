@@ -1,0 +1,23 @@
+name: Zip Plugin for Moodle Import
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - feat/cancel-button
+
+jobs:
+  zip_plugin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: oauth
+      - run: rm -rf oauth/.git
+      - run: zip -r oauth.zip oauth
+      - uses: actions/upload-artifact@v2
+        with:
+          name: oauth
+          path: oauth.zip

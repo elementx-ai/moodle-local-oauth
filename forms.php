@@ -111,6 +111,6 @@ class local_oauth_authorize_form extends moodleform {
 		}
 		$mform->addElement('html', $text);
 
-		$this->add_action_buttons(true, get_string('confirm'));
+		$this->add_action_buttons(false, get_string('continue'));
 	}
 }

@@ -18,7 +18,7 @@ $string['wp_url'] = 'URL del blog';
 $string['auth_question'] = 'Voleu autorizar l\'accés a <strong>{$a}</strong>?';
 $string['auth_question_desc'] = 'L\'aplicació està demanant accés a la informació següent del seu compte:';
 $string['auth_question_login'] = 'L\'aplicació vol tenir accés a la informació de login';
-
+$string['continue'] = 'Continuar'
 
 $string['oauth:manageclients'] = 'Gestiona els clients del proveïdor OAuth';
 

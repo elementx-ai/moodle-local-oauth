@@ -16,9 +16,9 @@ $string['user_id'] = 'User ID';
 $string['wp_url'] = 'Blog URL';
 
 $string['auth_question'] = 'Do you want to authorize <strong>{$a}</strong>?';
-$string['auth_question_desc'] = 'This application is asking to have access this information over your account:';
-$string['auth_question_login'] = 'This application is to access your login information';
-
+$string['auth_question_desc'] = 'This application is asking to access the following information about your account:';
+$string['auth_question_login'] = 'This application wants to access your login information';
+$string['continue'] = 'Continue'
 
 $string['oauth:manageclients'] = 'Manage OAuth provider Clients';
 
