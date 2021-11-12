@@ -1,0 +1,20 @@
+name: Zip Plugin for Moodle Import
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  zip_plugin:
+    name: Zip Plugin
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: oauth
+      - run: rm -rf oauth/.git
+      - uses: actions/upload-artifact@v2
+        with:
+          name: oauth
+          path: .

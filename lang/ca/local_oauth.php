@@ -17,8 +17,7 @@ $string['wp_url'] = 'URL del blog';
 
 $string['auth_question'] = 'Voleu autorizar l\'accés a <strong>{$a}</strong>?';
 $string['auth_question_desc'] = 'L\'aplicació està demanant accés a la informació següent del seu compte:';
-$string['auth_question_login'] = 'L\'aplicació vol tenir accés a la informació de login';
-
+$string['continue'] = 'Continuar';
 
 $string['oauth:manageclients'] = 'Gestiona els clients del proveïdor OAuth';
 
@@ -31,6 +30,7 @@ $string['insert_error'] = 'Error creant el client';
 $string['update_error'] = 'Error actualitzant la informació del client';
 $string['delete_error'] = 'Error eliminant el client';
 
+$string['scope_login'] = 'Informació de login';
 $string['scope_user_info'] = 'Informació del perfil d\'usuari/ària';
 
 $string['event_user_not_granted'] = 'Usuari/ària no autoritzat';

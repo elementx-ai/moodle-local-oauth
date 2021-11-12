@@ -16,9 +16,8 @@ $string['user_id'] = 'User ID';
 $string['wp_url'] = 'Blog URL';
 
 $string['auth_question'] = 'Do you want to authorize <strong>{$a}</strong>?';
-$string['auth_question_desc'] = 'This application is asking to have access this information over your account:';
-$string['auth_question_login'] = 'This application is to access your login information';
-
+$string['auth_question_desc'] = 'This application is asking to access the following information about your account:';
+$string['continue'] = 'Continue';
 
 $string['oauth:manageclients'] = 'Manage OAuth provider Clients';
 
@@ -31,7 +30,8 @@ $string['insert_error'] = 'Error occurred creating client';
 $string['update_error'] = 'Error occurred updating client data';
 $string['delete_error'] = 'Error occurred deleting client';
 
-$string['scope_user_info'] = 'User Profile Information';
+$string['scope_login'] = 'Login Information (email, login time, etc.)';
+$string['scope_user_info'] = 'User Profile Information (name, country, etc.)';
 
 $string['event_user_not_granted'] = 'User not granted';
 $string['event_user_granted'] = 'User granted';

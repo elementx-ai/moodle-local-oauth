@@ -17,8 +17,7 @@ $string['wp_url'] = 'URL del blog';
 
 $string['auth_question'] = '¿Quiere autorizar el acceso a <strong>{$a}</strong>?';
 $string['auth_question_desc'] = 'La aplicación está pidiendo acceso a la siguiente información de su cuenta:';
-$string['auth_question_login'] = 'Esta aplicación quiere acceder a su información de login';
-
+$string['continue'] = 'Seguir';
 
 $string['oauth:manageclients'] = 'Gestionar los clientes del proveedor de OAuth';
 
@@ -31,6 +30,7 @@ $string['insert_error'] = 'Se ha producido un error creando el cliente';
 $string['update_error'] = 'Se ha producido un error actualizando la información del cliente';
 $string['delete_error'] = 'Se ha producido un error eliminando el cliente';
 
+$string['scope_login'] = 'Información de login';
 $string['scope_user_info'] = 'Información del perfil de usuario';
 
 $string['event_user_not_granted'] = 'Usuario no autorizado';
