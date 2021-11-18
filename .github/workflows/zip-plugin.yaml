@@ -1,0 +1,26 @@
+name: Zip Plugin for Moodle Import
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  zip_plugin:
+    name: Zip Plugin
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: oauth
+      - id: vars
+        run: echo "::set-output name=short_sha::$(git rev-parse --short HEAD)"
+        working-directory: oauth
+      - run: rm -rf oauth/.git
+      - uses: actions/upload-artifact@v2
+        with:
+          name: oauth-${{ steps.vars.outputs.short_sha }}
+          path: .
