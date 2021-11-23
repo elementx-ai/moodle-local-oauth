@@ -29,6 +29,8 @@ $clientid = required_param('client_id', PARAM_RAW);
 $responsetype = required_param('response_type', PARAM_RAW);
 $scope = optional_param('scope', false, PARAM_TEXT);
 $state = optional_param('state', false, PARAM_TEXT);
+$redirect_uri = urlencode(optional_param('redirect_uri', false, PARAM_URL));
+
 $url = $CFG->wwwroot.'/local/oauth/login.php?client_id='.$clientid.'&response_type='.$responsetype;
 
 if ($scope) {
@@ -37,6 +39,10 @@ if ($scope) {
 
 if ($state) {
     $url .= '&state='.$state;
+}
+
+if ($redirect_uri) {
+    $url .= '&redirect_uri'.$redirect_uri;
 }
 
 $PAGE->set_url($CFG->wwwroot.'/local/oauth/login.php');
