@@ -13,6 +13,7 @@ function oauth_get_server() {
     $server = new OAuth2\Server($storage);
     $server->setConfig('enforce_state', false);
     $server->setConfig('require_exact_redirect_uri', false);
+    $server->setConfig('auth_code_lifetime', 600);
 
     // Add the "Client Credentials" grant type (it is the simplest of the grant types)
     $server->addGrantType(new OAuth2\GrantType\ClientCredentials($storage));
