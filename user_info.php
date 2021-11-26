@@ -20,7 +20,7 @@ $token = $server->getAccessTokenData(OAuth2\Request::createFromGlobals());
 if (isset($token['user_id']) && !empty($token['user_id'])) {
 
     $user = $DB->get_record_sql('SELECT id,auth,username,idnumber,firstname,lastname,email,lang,city,country,phone1,address,description FROM {user} WHERE id = :id', ['id' => $token['user_id']]);
-    $tags = $DB->get_record_sql('SELECT id,user_id,name,rawname FROM {tag} WHERE user_id = :id', ['id' => $token['user_id']]);
+    $tags = $DB->get_record_sql('SELECT id,userid,name,rawname FROM {tag} WHERE userid = :id', ['id' => $token['user_id']]);
 
     if (!$user) {
         $logparams = array('other' => array('cause' => 'user_not_found'));
