@@ -19,8 +19,8 @@ if (!$server->verifyResourceRequest(OAuth2\Request::createFromGlobals())) {
 $token = $server->getAccessTokenData(OAuth2\Request::createFromGlobals());
 if (isset($token['user_id']) && !empty($token['user_id'])) {
 
-    $user = $DB->get_record_sql('SELECT id,auth,username,idnumber,firstname,lastname,email,lang,city,country,phone1,address,description FROM {user} WHERE id = :id', ['id' => $token['user_id']]);
-    $tags = $DB->get_record_sql('SELECT id,userid,name,rawname FROM {tag} WHERE userid = :id', ['id' => $token['user_id']]);
+    $user = $DB->get_record_sql('SELECT id,auth,username,idnumber,firstname,lastname,email,lang,city,country,phone1,address,description FROM {user} WHERE id=:id', ['id' => $token['user_id']]);
+    $tags = $DB->get_records_sql('SELECT ti.tagid as id, t.rawname as tag FROM {tag_instance} as ti INNER JOIN {tag} as t on t.id=ti.tagid WHERE itemtype=\'user\' AND itemid=:user_id;', ['user_id' => $token['user_id']]);
 
     if (!$user) {
         $logparams = array('other' => array('cause' => 'user_not_found'));
