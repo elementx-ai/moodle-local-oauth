@@ -42,7 +42,7 @@ if ($state) {
 }
 
 if ($redirect_uri) {
-    $url .= '&redirect_uri'.$redirect_uri;
+    $url .= '&redirect_uri='.$redirect_uri;
 }
 
 $PAGE->set_url($CFG->wwwroot.'/local/oauth/login.php');

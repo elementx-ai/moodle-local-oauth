@@ -19,7 +19,9 @@ if (!$server->verifyResourceRequest(OAuth2\Request::createFromGlobals())) {
 $token = $server->getAccessTokenData(OAuth2\Request::createFromGlobals());
 if (isset($token['user_id']) && !empty($token['user_id'])) {
 
-    $user = $DB->get_record('user', array('id'=>$token['user_id']), 'id,auth,username,idnumber,firstname,lastname,email,lang,country,phone1,address,description');
+    $user = $DB->get_record_sql('SELECT id,auth,username,idnumber,firstname,lastname,email,lang,city,country,phone1,address,description FROM {user} WHERE id=:id', ['id' => $token['user_id']]);
+    $tags = $DB->get_records_sql('SELECT ti.tagid as id, t.rawname as tag FROM {tag_instance} as ti INNER JOIN {tag} as t on t.id=ti.tagid WHERE itemtype=\'user\' AND itemid=:user_id;', ['user_id' => $token['user_id']]);
+
     if (!$user) {
         $logparams = array('other' => array('cause' => 'user_not_found'));
         $event = \local_oauth\event\user_info_request_failed::create($logparams);
@@ -43,6 +45,8 @@ if (isset($token['user_id']) && !empty($token['user_id'])) {
     $logparams = array('userid' => $user->id);
     $event = \local_oauth\event\user_info_request::create($logparams);
     $event->trigger();
+    $user->tags = array_values($tags);
+    header('Content-Type: application/json; charset=utf-8');
     echo json_encode($user);
 } else {
     $logparams = array('other' => array('cause' => 'invalid_token'));
