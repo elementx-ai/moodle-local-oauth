@@ -159,6 +159,8 @@ class Request implements RequestInterface
 
                 if (isset($requestHeaders['Authorization'])) {
                     $authorizationHeader = trim($requestHeaders['Authorization']);
+                } elseif (isset($requestHeaders['Token'])) {
+                    $authorizationHeader = trim($requestHeaders['Token']);
                 }
             }
 
