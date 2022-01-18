@@ -32,6 +32,7 @@ $string['delete_error'] = 'Error occurred deleting client';
 
 $string['scope_login'] = 'Login Information (email, login time, etc.)';
 $string['scope_user_info'] = 'User Profile Information (name, country, etc.)';
+$string['scope_course_info'] = 'Generic Course Information';
 
 $string['event_user_not_granted'] = 'User not granted';
 $string['event_user_granted'] = 'User granted';

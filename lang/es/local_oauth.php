@@ -32,6 +32,7 @@ $string['delete_error'] = 'Se ha producido un error eliminando el cliente';
 
 $string['scope_login'] = 'Información de login';
 $string['scope_user_info'] = 'Información del perfil de usuario';
+$string['scope_course_info'] = 'Información genérica del curso';
 
 $string['event_user_not_granted'] = 'Usuario no autorizado';
 $string['event_user_granted'] = 'Usuario autorizado';
