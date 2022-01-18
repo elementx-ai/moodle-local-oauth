@@ -68,3 +68,10 @@ function authorize_user_scope($userid, $clientid, $scope = false) {
 
     $DB->insert_record('oauth_user_auth_scopes', $record);
 }
+
+function send_invalid_response($statusCode, $logparams) {
+    $event = \local_oauth\event\user_info_request_failed::create($logparams);
+    $event->trigger();
+    $response = new OAuth2\Response(array('message' => OAuth2\Response::$statusTexts[$statusCode]), $statusCode);
+    $response->send();
+}
