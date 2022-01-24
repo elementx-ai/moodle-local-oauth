@@ -45,7 +45,7 @@ $course_id = $course->id;
 
 // Ensure user is enrolled in course
 $course_enrollment = $DB->get_record_sql(
-    'SELECT u.id, c.id FROM mdl_user u INNER JOIN mdl_user_enrolments ue ON ue.userid = u.id INNER JOIN mdl_enrol e ON e.id = ue.enrolid INNER JOIN mdl_course c ON e.courseid = c.id WHERE u.id=:user_id AND c.id=:course_id', ['user_id' => $userid, 'course_id' => $course_id]
+    'SELECT u.id, c.id FROM {user} AS u INNER JOIN {user_enrolments} AS ue ON ue.userid=u.id INNER JOIN {enrol} AS e ON e.id=ue.enrolid INNER JOIN {course} AS c ON e.courseid=c.id WHERE u.id=:user_id AND c.id=:course_id', ['user_id' => $userid, 'course_id' => $course_id]
 );
 if (!$course_enrollment) {
     return send_invalid_response(404, array('other' => array('cause' => 'user_not_enrolled_in_course')));
