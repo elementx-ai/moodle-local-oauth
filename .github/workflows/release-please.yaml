@@ -1,0 +1,40 @@
+---
+name: Release Please
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      releases_created: ${{ steps.release.outputs.releases_created }}
+      upload_url: ${{ steps.release.outputs.upload_url }}
+      major: ${{ steps.release.outputs.major }}
+      minor: ${{ steps.release.outputs.minor }}
+      patch: ${{ steps.release.outputs.patch }}
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: simple
+          package-name: release-please-action
+
+  publish-release-plugin:
+    runs-on: ubuntu-latest
+    needs: [release-please]
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "VERSION=${{ needs.release-please.outputs.major }}.${{ needs.release-please.outputs.minor }}.${{ needs.release-please.outputs.patch }}" >> "$GITHUB_ENV"
+      - run: zip "oauth-$VERSION" .
+      - uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ needs.release-please.outputs.upload_url }}
+          asset_path: ./oauth-${{ env.VERSION }}.zip
+          asset_name: oauth-${{ env.VERSION }}.zip
+          asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
