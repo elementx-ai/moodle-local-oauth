@@ -4,7 +4,7 @@ It provides an [OAuth2](https://tools.ietf.org/html/rfc6749 "RFC6749") server so
 Oauth2 Library has been taken from https://github.com/bshaffer/oauth2-server-php
 
 ## Requirements
-* #### Moodle 2.8 o higher installed
+* #### Moodle 2.8 or higher
 * #### Admin account
 
 ## Instalation steps

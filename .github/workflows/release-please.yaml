@@ -30,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo "VERSION=${{ needs.release-please.outputs.major }}.${{ needs.release-please.outputs.minor }}.${{ needs.release-please.outputs.patch }}" >> "$GITHUB_ENV"
-      - run: zip "oauth-$VERSION" .
+      - run: zip "oauth-$VERSION" ./*
       - uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ needs.release-please.outputs.upload_url }}
