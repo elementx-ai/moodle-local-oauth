@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/elementx-ai/moodle-local-oauth/compare/v1.0.1...v1.0.2) (2022-12-07)
+
+
+### Bug Fixes
+
+* zip file missing extension, zip file glob ([#17](https://github.com/elementx-ai/moodle-local-oauth/issues/17)) ([f0aabcc](https://github.com/elementx-ai/moodle-local-oauth/commit/f0aabccda2ae01e53546434519d81c6fddf2962d))
+
 ## [1.0.1](https://github.com/elementx-ai/moodle-local-oauth/compare/v1.0.0...v1.0.1) (2022-12-07)
 
 
