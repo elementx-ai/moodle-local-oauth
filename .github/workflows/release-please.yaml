@@ -29,6 +29,8 @@ jobs:
     if: needs.release-please.outputs.releases_created
     steps:
       - uses: actions/checkout@v3
+        with:
+          path: oauth
       - run: echo "VERSION=${{ needs.release-please.outputs.major }}.${{ needs.release-please.outputs.minor }}.${{ needs.release-please.outputs.patch }}" >> "$GITHUB_ENV"
       - run: zip "oauth-$VERSION.zip" ./**/*
       - uses: actions/upload-release-asset@v1
