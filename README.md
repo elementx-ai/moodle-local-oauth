@@ -32,7 +32,7 @@ Oauth2 Library has been taken from https://github.com/bshaffer/oauth2-server-php
 
 2. The user must log in to Moodle and authorize your application to use its basic info.
 
-3. If it went all ok, the plugin should redirect the user to something like: `http://yourapplicationdomain.com/foo?code=55c057549f29c428066cbbd67ca6b17099cb1a9e` *(that's a GET request to the Redirect URL given with the code parameter)*
+3. If everything worked correctly, the plugin should redirect the user to something like: `http://yourapplicationdomain.com/foo?code=55c057549f29c428066cbbd67ca6b17099cb1a9e` *(that's a GET request to the Redirect URL given with the code parameter)*
 
 4. Using the code given, your application must send a POST request to `http://moodledomain.com/local/oauth/token.php`  having the following parameters: `{'code': '55c057549f29c428066cbbd67ca6b17099cb1a9e', 'client_id': 'EXAMPLE', 'client_secret': 'codeGivenAfterTheFormWasFilled', 'grant_type': 'authorization_code',   'scope': 'user_info'}`.
 
