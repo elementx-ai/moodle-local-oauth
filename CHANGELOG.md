@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/elementx-ai/moodle-local-oauth/compare/v1.0.0...v1.0.1) (2022-12-07)
+
+
+### Bug Fixes
+
+* Zip command in release-please ([#15](https://github.com/elementx-ai/moodle-local-oauth/issues/15)) ([fb43d67](https://github.com/elementx-ai/moodle-local-oauth/commit/fb43d676ec033ba1c4949913f05ba43843db32f6))
+
 ## 1.0.0 (2022-12-06)
 
 
