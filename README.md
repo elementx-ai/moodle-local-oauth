@@ -8,7 +8,7 @@ Oauth2 Library has been taken from https://github.com/bshaffer/oauth2-server-php
 * #### Admin account
 
 ## Instalation steps
-1. Download the latest [release](https://github.com/elementx-ai/moodle-local-oauth/releases) _.zip_ file.]
+1. Download the latest [release](https://github.com/elementx-ai/moodle-local-oauth/releases) _.zip_ file.
 
 2. Log in to Moodle as an administrator.
 
