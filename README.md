@@ -8,23 +8,21 @@ Oauth2 Library has been taken from https://github.com/bshaffer/oauth2-server-php
 * #### Admin account
 
 ## Instalation steps
-1. Clone this repository in a directory named "oauth".  `$ git clone https://github.com/cognitivabrasil/moodle-local_oauth.git oauth`
+1. Download the latest [release](https://github.com/elementx-ai/moodle-local-oauth/releases) _.zip_ file.
 
-2. Compress it to a _.zip_ file.
+2. Log in to Moodle as an administrator.
 
-3. Log in to Moodle as an administrator.
+3. Search a block named _Administration_ and look for _Site Administration > Plugins > Install Plugins_.
 
-4. Search a block named _Administration_ and look for _Site Administration > Plugins > Install Plugins_.
+4. Choose the _.zip_ file and hit the button _Install Plugin from the ZIP file_.
 
-5. Choose the _.zip_ file and hit the button _Install Plugin from the ZIP file_.
+5. Make sure the directory *path_to_moodle/local/* has writing permissions for moodle. If the validation is ok, install it.
 
-6. Make sure the directory *path_to_moodle/local/* has writing permissions for moodle. If the validation is ok, install it.
+6. Go to *Site Administration > Server > OAuth provider settings*
 
-7. Go to *Site Administration > Server > OAuth provider settings*
+7. Click *Add new client*
 
-8. Click *Add new client*
-
-9. Fill in the form. Your Client Identifier and Client Secret (which will be given later) will be used for you to authenticate. The Redirect URL must be the URL mapping to your client that will be used.
+8. Fill in the form. Your Client Identifier and Client Secret (which will be given later) will be used for you to authenticate. The Redirect URL must be the URL mapping to your client that will be used.
 
 ## How to use
 
