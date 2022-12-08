@@ -12,7 +12,7 @@ Oauth2 Library has been taken from https://github.com/bshaffer/oauth2-server-php
 
 2. Log in to Moodle as an administrator.
 
-3. Search a block named _Administration_ and look for _Site Administration > Plugins > Install Plugins_.
+3. Search for a block named _Administration_ and look for _Site Administration > Plugins > Install Plugins_.
 
 4. Choose the _.zip_ file and hit the button _Install Plugin from the ZIP file_.
 
