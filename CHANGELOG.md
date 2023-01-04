@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/elementx-ai/moodle-local-oauth/compare/v1.0.4...v1.0.5) (2023-01-04)
+
+
+### Bug Fixes
+
+* misuse of count in php72 ([#23](https://github.com/elementx-ai/moodle-local-oauth/issues/23)) ([c66fc7b](https://github.com/elementx-ai/moodle-local-oauth/commit/c66fc7b550f5ccdb36f98d73c8bfe255ac5c24b6))
+
 ## [1.0.4](https://github.com/elementx-ai/moodle-local-oauth/compare/v1.0.3...v1.0.4) (2022-12-08)
 
 
