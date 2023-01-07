@@ -57,8 +57,18 @@ class Server implements ResourceControllerInterface,
     protected $userInfoController;
 
     // config classes
-    protected $grantTypes;
-    protected $responseTypes;
+
+    // Fix taken from https://github.com/bshaffer/oauth2-server-php/pull/872
+    /**
+     * @var array
+     */
+    protected $grantTypes = array();
+
+    /**
+     * @var array
+     */
+    protected $responseTypes = array();
+
     protected $tokenType;
     protected $scopeUtil;
     protected $clientAssertionType;
