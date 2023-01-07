@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/elementx-ai/moodle-local-oauth/compare/v1.0.5...v1.0.6) (2023-01-07)
+
+
+### Bug Fixes
+
+* grantTypes, responseTypes causing count error when not initialized ([#25](https://github.com/elementx-ai/moodle-local-oauth/issues/25)) ([731ad00](https://github.com/elementx-ai/moodle-local-oauth/commit/731ad00c23610433ac7c2ae4fc734c81f4572f23))
+
 ## [1.0.5](https://github.com/elementx-ai/moodle-local-oauth/compare/v1.0.4...v1.0.5) (2023-01-04)
 
 
