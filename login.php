@@ -34,11 +34,11 @@ $redirect_uri = urlencode(optional_param('redirect_uri', false, PARAM_RAW));
 $url = $CFG->wwwroot.'/local/oauth/login.php?client_id='.$clientid.'&response_type='.$responsetype;
 
 if ($scope) {
-    $url .= '&scope='.$scope;
+    $url .= '&scope=' . $scope;
 }
 
 if ($state) {
-    $url .= '&state='.$state;
+    $url .= '&state=' . $state;
 }
 
 if ($redirect_uri) {
@@ -49,7 +49,7 @@ $PAGE->set_url($CFG->wwwroot.'/local/oauth/login.php');
 $PAGE->set_context(context_system::instance());
 $PAGE->set_pagelayout('login');
 
-if (isloggedin() and !isguestuser()) {
+if (isloggedin() && !isguestuser()) {
     // include our OAuth2 Server object
     $server = oauth_get_server();
 
