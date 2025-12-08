@@ -18,7 +18,7 @@ jobs:
         run: echo "::set-output name=short_sha::$(git rev-parse --short HEAD)"
         working-directory: oauth
       - run: rm -rf oauth/.git
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v5.0.0
         with:
           name: oauth-${{ steps.vars.outputs.short_sha }}
           path: .
