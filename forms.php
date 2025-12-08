@@ -99,17 +99,19 @@ class local_oauth_authorize_form extends moodleform {
 
       $text = get_string('auth_question', 'local_oauth', $client_id).'<br />';
       $mform->addElement('html', $text);
-      $scope = optional_param('scope', "", PARAM_TEXT);
 
-      $text = get_string('auth_question_desc', 'local_oauth');
-      $text .= '<ul>';
-
-      $scopes = array_filter(explode(' ', $scope));
-      array_unshift($scopes, "login");
-      foreach ($scopes as $scope) {
-        $text .= '<li>'.get_string('scope_'.$scope, 'local_oauth').'</li>';
+      $scope = optional_param('scope', false, PARAM_TEXT);
+      if (!empty($scope)) {
+        $scopes = explode(' ', $scope);
+        $text = get_string('auth_question_desc', 'local_oauth') . '<ul>';
+        foreach ($scopes as $scope) {
+          $text .= '<li>' . get_string('scope_' . $scope, 'local_oauth') . '</li>';
+        }
+        $text .= '</ul>';
+      } else {
+          $text = get_string('auth_question_login', 'local_oauth');
       }
-      $text .= '</ul>';
+
       $mform->addElement('html', $text);
 
 		  $this->add_action_buttons(false, get_string('continue'));

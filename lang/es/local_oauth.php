@@ -17,6 +17,7 @@ $string['wp_url'] = 'URL del blog';
 
 $string['auth_question'] = '¿Quiere autorizar el acceso a <strong>{$a}</strong>?';
 $string['auth_question_desc'] = 'La aplicación está pidiendo acceso a la siguiente información de su cuenta:';
+$string['auth_question_login'] = 'Esta aplicación va a acceder a su información de inicio de sesión';
 $string['continue'] = 'Seguir';
 
 $string['oauth:manageclients'] = 'Gestionar los clientes del proveedor de OAuth';

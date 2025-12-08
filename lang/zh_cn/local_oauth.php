@@ -17,8 +17,8 @@ $string['wp_url'] = '博客地址';
 
 $string['auth_question'] = '您希望授权 <strong>{$a}</strong> 吗?';
 $string['auth_question_desc'] = '应用希望获得关于您账户的以下信息：:';
-$string['auth_question_login'] = '该应用已被授权访问您的登陆信息';
-
+$string['auth_question_login'] = '此应用需要访问您的登录信息';
+$string['continue'] = '继续';
 
 $string['oauth:manageclients'] = '管理授权(OAuth)提供客户端';
 
@@ -31,7 +31,9 @@ $string['insert_error'] = '创建客户端时出错';
 $string['update_error'] = '更新客户端数据时出错';
 $string['delete_error'] = '删除客户端时出错';
 
+$string['scope_login'] = '登录信息';
 $string['scope_user_info'] = '用户账户信息';
+$string['scope_course_info'] = '课程基本信息';
 
 $string['event_user_not_granted'] = '用户不允许';
 $string['event_user_granted'] = '用户允许';
