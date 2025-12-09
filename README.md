@@ -4,10 +4,10 @@ It provides an [OAuth2](https://tools.ietf.org/html/rfc6749 "RFC6749") server so
 Oauth2 Library has been taken from https://github.com/bshaffer/oauth2-server-php
 
 ## Requirements
-* #### Moodle 2.8 or higher
+* #### Moodle 4.5 or higher
 * #### Admin account
 
-## Instalation steps
+## Installation steps
 1. Download the latest [release](https://github.com/elementx-ai/moodle-local-oauth/releases) _.zip_ file.
 
 2. Log in to Moodle as an administrator.
@@ -38,15 +38,23 @@ Oauth2 Library has been taken from https://github.com/bshaffer/oauth2-server-php
 
 6. Finally, send a POST request to `http://moodledomain.com/local/oauth/user_info.php` passing the access token in the body as `application/x-www-form-urlencoded`, like: `access_token:79d687a0ea4910c6662b2e38116528fdcd65f0d1`.
 
-7. If the token given is valid, a JSON containing the user information is returned. Ex: `{"id":"22","username":"foobar","idnumber":"","firstname":"Foo","lastname":"Bar","email":"foo@bar.com","lang":"en","phone1":"5551619192"}`
+7. If the token given is valid, a JSON containing the user information is returned. Ex: `{"id":"22","username":"foobar","idnumber":"","firstname":"Foo","lastname":"Bar","email":"foo@bar.com","lang":"en","phone1":"5551619192","auth":"manual","country":"foo","description":"bar"}`
 
+Note: If testing in Postman, you need to set encoding to `x-www-form-urlencoded` for POST requests.
 
+## Development
 
-**This plugin has been tested on Moodle 2.8 and Moodle 3.0**
+The easiest way to develop this plugin is to run Moodle locally using [moodle-docker](https://github.com/moodlehq/moodle-docker).
 
+1. Set up your local Moodle environment following the instructions in the `moodle-docker` repository.
+2. Navigate to your Moodle installation's `local` directory (e.g., `moodle/public/local`).
+3. Clone this repository into a folder named `oauth`:
 
-## Contributors
-Apart from people in this repository, also have contributed:
+```sh
+cd moodle/public/local
+git clone git@github.com:elementx-ai/moodle-local-oauth.git oauth
+```
 
-- [igorpf] (https://github.com/igorpf)
+4. Start your Moodle docker container. The plugin will be available for installation or upgrade.
 
+**This plugin has been tested on Moodle 4.5+**
