@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/elementx-ai/moodle-local-oauth/compare/v1.0.6...v1.1.0) (2025-12-09)
+
+
+### Features
+
+* Update to upstream (8e941d) ([#27](https://github.com/elementx-ai/moodle-local-oauth/issues/27)) ([c3cf33a](https://github.com/elementx-ai/moodle-local-oauth/commit/c3cf33a115daf0ac3f9e1f540967c5bc503d0a72))
+
 ## [1.0.6](https://github.com/elementx-ai/moodle-local-oauth/compare/v1.0.5...v1.0.6) (2023-01-07)
 
 
