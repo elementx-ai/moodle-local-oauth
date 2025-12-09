@@ -2,8 +2,8 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version  = 2023091301; // The (date) version of this plugin.
-$plugin->requires = 2011021900; // Requires this Moodle version.
-$plugin->release   = 'v2.0.1';  // Human-readable version name.
+$plugin->version  = 2023091302;
+$plugin->requires = 2024100700.00;
+$plugin->release   = '1.1.0';
 $plugin->component = 'local_oauth';
 $plugin->maturity  = MATURITY_STABLE;

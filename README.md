@@ -4,7 +4,7 @@ It provides an [OAuth2](https://tools.ietf.org/html/rfc6749 "RFC6749") server so
 Oauth2 Library has been taken from https://github.com/bshaffer/oauth2-server-php
 
 ## Requirements
-* #### Moodle 2.8 or higher
+* #### Moodle 4.5 or higher
 * #### Admin account
 
 ## Installation steps
@@ -42,13 +42,19 @@ Oauth2 Library has been taken from https://github.com/bshaffer/oauth2-server-php
 
 Note: If testing in Postman, you need to set encoding to `x-www-form-urlencoded` for POST requests.
 
+## Development
 
+The easiest way to develop this plugin is to run Moodle locally using [moodle-docker](https://github.com/moodlehq/moodle-docker).
 
-**This plugin has been tested on Moodle 2.8 and Moodle 3.0**
+1. Set up your local Moodle environment following the instructions in the `moodle-docker` repository.
+2. Navigate to your Moodle installation's `local` directory (e.g., `moodle/public/local`).
+3. Clone this repository into a folder named `oauth`:
 
+```sh
+cd moodle/public/local
+git clone git@github.com:elementx-ai/moodle-local-oauth.git oauth
+```
 
-## Contributors
-Apart from people in this repository, also have contributed:
+4. Start your Moodle docker container. The plugin will be available for installation or upgrade.
 
-- [igorpf] (https://github.com/igorpf)
-
+**This plugin has been tested on Moodle 4.5+**
